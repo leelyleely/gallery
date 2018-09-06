@@ -5,7 +5,7 @@ gallery
 * picasa data(google picasa相簿資料)
 * google sheets(自定義不顯示的相簿名稱)
 
-#### 聯繫表單
+#### 聯繫表單(about.html)
 * 確認填入表單對象(相同ip)一小時內是否已留言五次，超過不可留言。
 * 輸入內容經過驗證，資料寫入google sheets並發送mail通知網站所有者。
 
