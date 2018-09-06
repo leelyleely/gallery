@@ -26,9 +26,9 @@ function jsonConduct(albumdata,blocklist) {
     {        
         for (i = 0; i < blocklist.length; i++)
         {
-            var blockitem = blocklist[i]["title"].trim().replace(/\s+/g, "");            
-            if (result[key].media$group.media$title.$t.trim().replace(/\s+/g, "") === blockitem) {
-                result.splice(key, 1);   //²¾°£·íµ§¸ê®Æ°_©lªº¦@¤@µ§¸ê®Æ
+            var blockitem = escape(blocklist[i]["title"].trim().replace(/\s+/g, ""));            
+            if (escape(result[key].media$group.media$title.$t.trim().replace(/\s+/g, "")) === blockitem) {
+                result.splice(key, 1);   //ç§»é™¤ç•¶ç­†è³‡æ–™èµ·å§‹çš„å…±ä¸€ç­†è³‡æ–™
             }
         }        
     }    
