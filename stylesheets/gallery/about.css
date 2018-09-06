@@ -1,0 +1,30 @@
+﻿/*add about.html style*/
+.destype {    
+    border-left: 6px solid #6699ff;padding: 8px;color:#000000;margin:5px;width:1080px; background:#e8e8e8;    
+}
+
+.notetype {
+    color:red;
+}
+
+.abouttype,.texttype,.contacttype {
+    font-size: 16px; margin: 13px 13px 13px 20px;color:#151515;
+}
+.texttype, ul li{
+    list-style-type: disc  !important; margin-left:20px;
+}
+.contacttype ul li{
+    list-style-type:none;display:block; margin-left:10px;
+}
+#contactinfo {
+    width:75%;
+}
+
+.labelinfo {
+    vertical-align:text-top;width:70px;
+}
+
+.tdinfo{
+    padding-bottom:5px;
+}
+

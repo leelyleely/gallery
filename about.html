@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> 我的網路相簿 - 關於我 </title>
+
+    <meta name="keywords" content="網路相簿, 攝影, 旅遊"/>
+    <meta name="description" content=" 歡迎光臨我的網路相簿，這是關於我的頁面，欲接洽請留言給我 "/>
+    <meta property="og:language" content="zh-TW"/>
+    <meta property="og:site_name" content=" 我的網路相簿 - My Photo Gallery" />
+    <meta property="og:type" content="website"/>
+
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/detail/font-awesome.min.css" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8;width=device-width, initial-scale=1">
+    <!--semantic ui-->
+    <link type="text/css" href="stylesheets/semantic/image.min.css" rel="stylesheet" />
+    <link type="text/css" href="stylesheets/semantic/input.min.css" rel="stylesheet" />
+    <link type="text/css" href="stylesheets/semantic/form.min.css" rel="stylesheet" />
+    <link type="text/css" href="stylesheets/semantic/button.min.css" rel="stylesheet" />
+
+    <!--gallery-->
+    <link type="text/css" href="stylesheets/gallery/styles.css" rel="stylesheet" media="all" />    
+    <link type="text/css" href="stylesheets/gallery/about.css" rel="stylesheet" media="all" />    
+  
+</head>
+<body>
+
+    <!--main content-->
+    <div class="wrapper">
+        <div class="portfolio-content">
+            <!--title-->
+            <div>
+                <h2 class="title-page"> 關於本站 </h2>
+            </div>
+            <div class="abouttype">
+                <!-- 這是關於本站。這是關於本站。這是關於本站。這是關於本站。這是關於本站。這是關於本站。這是關於本站。這是關於本站。這是關於本站。這是關於本站。-->
+            </div>
+
+            <div class="destype">
+                <h2> 關於我 </h2>
+            </div>
+            <div class="abouttype">                
+                <div style="margin-bottom: 14px">                    
+                    若有任何疑問或建議，請留言給我，謝謝～
+                </div>                                        
+            </div>
+
+            <div class="destype">
+                <h2> 攝影器材 </h2>
+            </div>
+            <div class="texttype">
+                <ul>
+                    <li> 隨身機：Canon S120、Ricoh GR</li>
+                    <li> 大玩具：Nikon D7000</li>
+                    <li> 鏡頭群：Tokina 124、Nikkor 28-105mm、Nikkor 60mm、Tamron 70-300mm</li>                    
+                </ul>
+            </div>
+
+            <div class="destype">
+                <h2> 本站版權 </h2>
+            </div>
+            <div class="texttype">
+                <ul>                    
+                    <li><span class="notetype"> 本站照片轉載／使用請取得本人授權，請勿任意使用 </span></li>
+                </ul>
+            </div>
+
+            <div class="destype">
+                <h2> 與我聯絡 </h2>
+            </div>
+            <div class="contacttype">
+                <form id="commentform" class="cmxform" method="post">
+                    <table id="contactinfo">
+                        <tr>
+                            <td class="labelinfo"> 大名：</td>
+                            <td class="tdinfo"><span class="ui input">
+                                <input type="text" id="cname" name="iptname" style="width:200px"/></span></td>
+                        </tr>
+                        <tr>
+                            <td class="labelinfo"> 信箱：</td>
+                            <td class="tdinfo"><span class="ui input">
+                                <input type="text" id="curl" name="ipturl" style="width:200px"/></span></td>
+                        </tr>
+                        <tr>
+                            <td class="labelinfo"> 留言：</td>
+                            <td class="tdinfo"><span class="ui form">
+                                <textarea rows="4" cols="50" id="ccomment" name="iptcomment" ></textarea></span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button id="sendout" type="button" class="ui primary button"> 送出 </button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <!--footer-->
+        <div id="footersc"></div>
+    </div>   
+    <script type="text/javascript" src="js/detail/jquery-2.0.3.min.js"></script>
+     <!--view-->
+    <script type="text/javascript" src="js/gallery/about.js"></script>
+    <!--validation-->    
+    <script type="text/javascript" src="js/gallery/jquery.validate.js"></script> 
+    <!--blockUI-->
+    <script type="text/javascript" src="js/gallery/jquery.blockUI.js"></script> 
+</body>
+</html>

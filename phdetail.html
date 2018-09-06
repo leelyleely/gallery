@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title> 我網路相簿 - 相簿內容 </title>
+
+    <meta name="keywords" content="網路相簿, 攝影, 旅遊" />
+    <meta name="description" content=" 歡迎光臨我的網路相簿，這是相簿內容頁面 " />
+    <meta property="og:language" content="zh-TW"/>
+      <meta property="og:site_name" content=" 我的網路相簿 - My Photo Gallery" />
+    <meta property="og:type" content="website"/>
+
+    <!--jgallery-->
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/detail/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/detail/jgallery.min.css?v=1.5.6" />
+
+  </head>
+
+  <body>    
+    <div id="gallery">
+        <div v-for="photo in photos">
+            <a v-bind:href="singleurl(photo.media$group.media$content[0].url)">                
+                <img v-bind:src="singleurl(photo.media$group.media$content[0].url)" v-bind:alt="photo.media$group.media$description.$t" />
+            </a>
+        </div>                
+    </div>
+    <!--footer-->
+    <div id="footersc" ></div>    
+
+    <script type="text/javascript" src="js/detail/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/detail/jgallery.min.js?v=1.5.6"></script>
+    <script type="text/javascript" src="js/detail/tinycolor-0.9.16.min.js"></script>    
+    <!--vue-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.6/vue.min.js"></script>    
+    <script src="js/detail/phdetail.js" type="text/javascript"></script>        
+  </body>
+  
+</html>          

@@ -1,0 +1,41 @@
+/*define index.html pagination css*/
+
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    font-size:15px;
+    font-family: monospace;
+}
+
+.pagination li:first-child a {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.pagination li:last-child a {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+ul.pagination li a.current {
+    background-color: #8baaed;/*#6892ed;*/
+    color: white;
+    border: 1px solid #8baaed;
+    pointer-events: none;
+}
+
+ul.pagination li a:hover:not(.current) {background-color: #ddd;}
+ul.pagination li a.current:hover {cursor:default;}
+#tfirst {cursor:default; pointer-events: none; color:#ddd;}

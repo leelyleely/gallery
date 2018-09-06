@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <title> 我的網路相簿 - My Photo Gallery</title>            
+
+        <meta name="author" content="leely"/>
+        <meta name="keywords" content="網路相簿, 攝影, 旅遊"/>
+        <meta name="description" content=" 歡迎光臨我的網路相簿 "/>
+        <meta property="og:language" content="zh-TW"/>
+        <meta property="og:site_name" content=" 我的網路相簿 - My Photo Gallery" />
+        <meta property="og:type" content="website"/>
+
+        <link rel="stylesheet" type="text/css" media="all" href="stylesheets/detail/font-awesome.min.css" />
+
+        <!--<meta http-equiv="Content-Type" name="viewport" content="width=device-width, initial-scale=1">-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8;width=device-width, initial-scale=1">        
+        <!--semantic ui-->
+        <link type="text/css" href="stylesheets/semantic/image.min.css" rel="stylesheet" />
+        <!--gallery-->        
+        <link type="text/css" href="stylesheets/gallery/styles.css" rel="stylesheet" media="all" />                                           
+        
+        <!--pagination-->
+        <link type="text/css" href="stylesheets/gallery/pagination.css" rel="stylesheet" media="all" />        
+        
+    </head>
+    <body>          
+                      
+        <!--main content--> 
+        <!--photo gallery-->
+        <div class="wrapper">
+            <div class="portfolio-content">            
+                <!--title-->
+                <h1 class="title-page">My Photo Gallery</h1>            
+                <!--description zone-->
+                <div id="albumdescription">
+                    <h2 >                        
+                        【版權聲明】歡迎光臨我的網路相簿，照片轉載／使用請取得本人授權，謝謝！（<a href="about.html"> 聯絡我 </a>）<br />
+                        &nbsp;&nbsp;Welcome to my photo gallery. Photos here to be used should be asked for an authorization.（<a href="about.html">Contact Me</a>）<br />                        
+                    </h2>                
+                </div>
+                <br/>
+                <br/>                                                
+                <div id="albumdata">                                     
+                    <ul class = "portfolio-area"  >                        
+                        <li class="portfolio-item2" v-bind:data-id="'id-'+album.gphoto$id.$t" v-for="album in albums | orderBy 'media$group.media$title.$t' -1 | filterBy searchKey | paginate ">
+                            <div>
+                                <span class="image-block">
+                                    <a class="image-zoom" v-bind:href="pageurl+album.gphoto$id.$t">
+                                        <div class="nailthumb-container">
+                                            <img v-bind:src="coverurl(album.media$group.media$content[0].url)" />
+                                        </div>
+                                    </a>
+                                </span>
+                                <div class="home-portfolio-text">
+                                    <h2 class="post-title-portfolio">
+                                        <a rel="bookmark" v-bind:title="album.title.$t">{{album.title.$t}}</a>
+                                    </h2>
+                                    <p class="post-subtitle-portfolio"> 共 {{album.gphoto$numphotos.$t}} 張照片 </p>
+                                </div>
+                            </div>
+                        </li>                                               
+                        <div class="column-clear"></div>    
+                    </ul>
+
+                    <br/>
+                    <!--pagination-->					
+                    <ul class="pagination">
+                        <li><a href="#" @click="setPage(0)" id="tfirst">«</a></li>
+                         <li v-for="pageNumber in totalPages" > 
+                             <a href="#" @click="setPage(pageNumber)"  :class="{current: currentPage === pageNumber, last: (pageNumber == totalPages - 1), first:(pageNumber == 0 )}">{{pageNumber+1}}</a> 
+                         </li> 
+                         <li><a href="#" @click="setPage(totalPages)" id="tlast">»</a></li> 
+                    </ul>
+                </div>            
+            </div>
+            <!--footer-->
+            <div id="footersc"></div>                                            
+        </div>
+                
+        <script type="text/javascript" src="js/detail/jquery-2.0.3.min.js"></script>
+        <!--view-->                         
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.6/vue.min.js"></script>
+        <script type="text/javascript" src="js/gallery/index.js"></script>        
+    </body>
+
+</html>
