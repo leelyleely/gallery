@@ -17,7 +17,7 @@ $().ready(function () {
             return false;
         else
             return true;
-    }, "不可輸入空白 ⊙︿⊙");
+    }, "不可輸入空白");
 
     var frmValidate = $('#commentform').validate({
         rules: {
@@ -42,21 +42,26 @@ $().ready(function () {
         messages: {
             iptname: {
                 required: "不輸入不知道您是誰喔 ⊙︿⊙",
-                minlength: "請至少輸入3個字 ＞﹏＜",
+                minlength: "請至少輸入3個字",
                 maxlength: "胃太小只吃的下20個字喔 ⊙︿⊙"
             },
             ipturl: {
                 required: "不輸入找不到您喔 ⊙︿⊙",
-                email: "格式不正確喔（╯－＿－）╯╧╧"                
+                email: "格式不正確喔"                
             },
             iptcomment: {
-                required: "沒有話要說嗎，不要亂按發送啊 (￣ε(#￣)☆╰╮o(￣皿￣///)",
-                minlength: "請至少輸入5個字 ＞﹏＜",
+                required: "不輸入不知道您要說甚麼喔",
+                minlength: "請至少輸入5個字",
                 maxlength: "胃太小只吃的下250個字喔 ⊙︿⊙"
             }
         }
     });
 
+    //back to index
+    $("#backhome").click(function () {
+	window.location.href='index.html';
+    });
+	
     //contact data insert
     $("#sendout").click(function () {                        
         var chkResult = frmValidate.form();
