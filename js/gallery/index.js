@@ -22,13 +22,13 @@ if (typeof (Storage) !== 'undefined') {
  */
 function jsonConduct(albumdata,blocklist) {
     var result = albumdata.feed.entry;    
-    for (var key in result)
+    for (j = 0; j < blocklist.length; j++)
     {        
-        for (i = 0; i < blocklist.length; i++)
-        {
-            var blockitem = escape(blocklist[i]["title"].trim().replace(/\s+/g, ""));            
-            if (escape(result[key].media$group.media$title.$t.trim().replace(/\s+/g, "")) === blockitem) {
-                result.splice(key, 1);   //移除當筆資料起始的共一筆資料
+        var blockitem = blocklist[j]["title"].trim().replace(/\s+/g, "");
+        for (i = 0; i < result.length; i++)
+        {                        
+            if (result[i].media$group.media$title.$t.trim().replace(/\s+/g, "") === blockitem) {
+                result.splice(i, 1);   //移除當筆資料起始的共一筆資料
             }
         }        
     }    
