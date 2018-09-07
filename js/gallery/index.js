@@ -2,15 +2,26 @@
 //record:pager number
 if (typeof (Storage) !== 'undefined') {
     if (window.sessionStorage["session"] !== 'undefined') {
-        if (window.sessionStorage["session"] == 'teafiftycloud') {            
+        if (window.sessionStorage["session"] == 'teafiftycloud') { 
+            setLoadingDiv(0);
         } else {
+            setLoadingDiv(3000);
             window.sessionStorage["session"] = 'teafiftycloud';
         }
     } else {
+        setLoadingDiv(3000);
         window.sessionStorage["session"] = 'teafiftycloud';
     }            
 } else {
     //when browser not support
+    setLoadingDiv(3000);
+}
+
+//set loading div's time
+function setLoadingDiv(n) {
+    setTimeout(function () {
+        $(".dt-loading").fadeOut('slow');
+    }, n);
 }
 
 //album data deduct blocklist data
