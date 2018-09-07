@@ -40,6 +40,7 @@ function jsonConduct(albumdata,blocklist) {
         {                        
             if (result[i].media$group.media$title.$t.trim().replace(/\s+/g, "") === blockitem) {
                 result.splice(i, 1);   //移除當筆資料起始的共一筆資料
+                break;
             }
         }        
     }    
