@@ -83,7 +83,7 @@ h2.post-title-portfolio a{font-size:90%;}
     /*border-left: 6px solid #6699ff;
     padding: 8px;margin:5px; */  /*201803*/
     color:#000000; 
-    line-height:26px;   /*201803:¦æ¶Z*/
+    line-height:26px;   /*201803:Â¦Ã¦Â¶Z*/
 }
 /*add sidebar menu button css(salu)*/
 #openleftbar{
@@ -288,4 +288,7 @@ li.active a{ text-decoration:underline;}
 }
 /*loading section setting --e--*/
 
-
+/*v-cloak*/
+[v-cloak] {
+  display: none;  
+} 
