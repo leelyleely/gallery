@@ -41,7 +41,7 @@
                 </div>
                 <br/>
                 <br/>                                                
-                <div id="albumdata">                                     
+                <div id="albumdata" v-cloak>                                     
                     <ul class = "portfolio-area"  >                        
                         <li class="portfolio-item2" v-bind:data-id="'id-'+album.gphoto$id.$t" v-for="album in albums | orderBy 'media$group.media$title.$t' -1 | filterBy searchKey | paginate ">
                             <div>
